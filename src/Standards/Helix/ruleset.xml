@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Helix" xsi:noNamespaceSchemaLocation="../../../phpcs.xsd">
+    <description>The Helix coding standard enforces rules for the Perbility/Helix project. It extends and modifies the PSR12 standard.</description>
+    
+    <rule ref="PSR12">
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration.BodyOnNextLineCASE"/>
+        <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
+        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+    </rule>
+    
+    <rule ref="Generic.PHP.RequireStrictTypes"/>
+    
+    <rule ref="Generic.PHP.ForbiddenFunctions">
+        <properties>
+            <property name="forbiddenFunctions" type="array">
+                <element key="delete" value="unset"/>
+                <element key="echo" value="print"/>
+                <element key="die" value="exit"/>
+                <element key="exit" value="return"/>
+                <element key="eval" value="null"/>
+            </property>
+        </properties>
+    </rule>
+    
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="3"/>
+            <property name="absoluteNestingLevel" value="4"/>
+        </properties>
+    </rule>
+    
+    <rule ref="Generic.ControlStructures.DisallowYodaConditions"/>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+    <rule ref="Generic.Formatting.SpaceAfterCast"/>
+    
+    <rule ref="Squiz.PHP.Heredoc"/>
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+    
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1"/>
+            <property name="spacingBeforeFirst" value="0"/>
+            <property name="spacingAfterLast" value="0"/>
+        </properties>
+    </rule>
+    
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing">
+        <properties>
+            <property name="spacing" value="1"/>
+            <property name="spacingBeforeFirst" value="0"/>
+        </properties>
+    </rule>
+    
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="1"/>
+        </properties>
+    </rule>
+    
+    <rule ref="Squiz.Arrays">
+        <exclude name="Squiz.Arrays.ArrayDeclaration.SingleLineNotAllowed"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"/>
+        <exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
+    </rule>
+    
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.ClassComment.Missing"/>
+    <rule ref="Squiz.Commenting.FunctionComment.Missing"/>
+    <rule ref="Squiz.Commenting.VariableComment.Missing"/>
+    <!-- TODO: Variables must use single-line comment -->
+    <!-- TODO: Force @author tag, forbid @package tag on classes -->
+    
+    <!-- TODO: No empty lines after opening class brace, before trait or class declarations -->
+    <!-- TODO: Use of short type keywords in PHPDoc ("bool" instead of "boolean") -->
+    <!-- TODO: Where to put line breaks in multi-line if statement? -->
+    <!-- TODO: Boolean logic with more parantheses? -->
+    
+</ruleset>
