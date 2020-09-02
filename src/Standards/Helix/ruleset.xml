@@ -26,8 +26,8 @@
     
     <rule ref="Generic.Metrics.NestingLevel">
         <properties>
-            <property name="nestingLevel" value="3"/>
-            <property name="absoluteNestingLevel" value="4"/>
+            <property name="nestingLevel" value="5"/>
+            <property name="absoluteNestingLevel" value="8"/>
         </properties>
     </rule>
     
@@ -66,6 +66,7 @@
         <exclude name="Squiz.Arrays.ArrayDeclaration.ValueNotAligned"/>
         <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
         <exclude name="Squiz.Arrays.ArrayDeclaration.DoubleArrowNotAligned"/>
+        <exclude name="Squiz.Arrays.ArrayBracketSpacing.SpaceBeforeBracket"/>
         <exclude name="Squiz.Arrays.ArrayDeclaration.NoComma"/>
     </rule>
     
@@ -75,6 +76,7 @@
     <rule ref="Squiz.Commenting.VariableComment.Missing"/>
     <!-- TODO: Variables must use single-line comment -->
     <!-- TODO: Force @author tag, forbid @package tag on classes -->
+    <!-- TODO: Forbit use of "array" as PHPDoc type hint, always force concrete type[] -->
     
     <!-- TODO: No empty lines after opening class brace, before trait or class declarations -->
     <!-- TODO: Use of short type keywords in PHPDoc ("bool" instead of "boolean") -->
