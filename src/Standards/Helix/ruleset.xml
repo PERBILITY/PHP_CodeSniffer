@@ -20,14 +20,10 @@
                 <element key="die" value="exit"/>
                 <element key="exit" value="return"/>
                 <element key="eval" value="null"/>
+                <element key="array_merge" value="ArrayUtils::append"/>
+                <element key="array_walk" value="ArrayUtils::walkRecursive"/>
+                <element key="array_walk_recursive" value="ArrayUtils::walkRecursive"/>
             </property>
-        </properties>
-    </rule>
-    
-    <rule ref="Generic.Metrics.NestingLevel">
-        <properties>
-            <property name="nestingLevel" value="5"/>
-            <property name="absoluteNestingLevel" value="8"/>
         </properties>
     </rule>
     
