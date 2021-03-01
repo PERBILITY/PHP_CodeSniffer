@@ -20,7 +20,7 @@
                 <element key="die" value="exit"/>
                 <element key="exit" value="return"/>
                 <element key="eval" value="null"/>
-                <element key="array_merge" value="ArrayUtils::append"/>
+                <element key="array_merge" value="ArrayUtils::append() or ArrayUtils::merge"/>
                 <element key="array_walk" value="ArrayUtils::walkRecursive"/>
                 <element key="array_walk_recursive" value="ArrayUtils::walkRecursive"/>
             </property>
